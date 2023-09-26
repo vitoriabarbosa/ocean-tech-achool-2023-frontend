@@ -1,8 +1,10 @@
 import './App.css'
+import Card from './components/Card/Card'
 
 function App() {
   return (
     <>
+      <Card />
       <div className="card">
         <h2>Rick Sanchez</h2>
 
@@ -11,7 +13,7 @@ function App() {
           <span className='tag'>Espécie: Humana</span>
           <span className="tag">Origem: Terra C-137</span>
         </div>
-        
+
         <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="Rick Sanchez"/>
       </div>
     </>
