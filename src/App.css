@@ -1,5 +1,6 @@
 body {
   background: #242424;
+  color: #fff;
 }
 
 #root {
@@ -7,4 +8,8 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
