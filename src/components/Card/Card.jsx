@@ -1,3 +1,6 @@
+import Tag from "../Tag/Tag";
+import "./Card.css"
+
 export default function Card(props) {
   const item = props.item;
 
@@ -14,7 +17,7 @@ export default function Card(props) {
   const tags = item.tags || [];
 
   return <div className="card">
-    <h2>{item.nome}</h2>
+    <h2>{item.name}</h2>
 
     <div className="tags">
       {tags.map(function (tag, index) {
@@ -22,6 +25,6 @@ export default function Card(props) {
       })}
     </div>
 
-    <img src={item.imagemUrl} />
+    <img src={item.image} />
   </div>
 }

@@ -11,7 +11,6 @@ function App() {
   //      Quando executada, a função também re-renderiza o componente automaticamente
 
   async function carregarDadosApi() {
-    console.log('carregarDadosApi')
 
     const response = await fetch("https://rickandmortyapi.com/api/character/")
 
@@ -19,19 +18,20 @@ function App() {
 
     const results = json.results
 
-    console.log(results)
     setItens(results)
   }
 
   // useEffect recebe duas informações:
-  // 1. Função contendo o efeito que será protegido pelo useEffect
-  // 2. Dependências que controlam a executam do useEffect. Array vazio para executar apenas 1 vez
+  // 1. Função contendo o código que será protegido pelo useEffect
+  // 2. Dependências que controlam a executam do useEffect.
+  //      Array vazio para executar apenas 1 vez
   
-  useEffect(function () {
-    carregarDadosApi()
-  }, [])
-
-  console.log("Renderizando o componente")
+  useEffect(
+    function () {
+      carregarDadosApi()
+    },
+    []
+  )
 
   return (
     <>
